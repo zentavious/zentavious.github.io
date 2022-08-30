@@ -1,6 +1,6 @@
 [watch]
 #  watch = []
-ignore = ["node_dependencies", "README.md"]
+ignore = ["node_dependencies"]
 
 [[hooks]]
 stage = "pre_build"
