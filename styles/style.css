@@ -188,7 +188,7 @@ a:hover {
 
 #header #header-content h1 {
 	margin: 0 0 2px 0;
-	color: #444;
+	color: black;
 }
 
 #header #header-content h2 {
@@ -213,7 +213,7 @@ a:hover {
 }
 
 #header #header-content .contact span {
-	color: #444;
+	color: black;
 	width: 75px;
 	float: left;
 }
@@ -354,13 +354,13 @@ ul#nav li.current a {
 
 #content .cv-section h3 {
 	font-size: 2.7rem;
-	color: #444;
+	color: black;
 	margin: 3rem 0 2rem 0;
 }
 
 #content .cv-section h4.title {
 	font-size: 2rem;
-	color: #444;
+	color: black;
 	margin: 0 0 -26px 0;
 }
 
