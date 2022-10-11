@@ -1,0 +1,609 @@
+/*
+Template Name:Azuka HTML Template
+Description:A CV/Resume HTML Template
+Author:Chris Creed
+URL:http://www.chris-creed.com
+*/
+
+/* Colors:Blue - #0b8bbb // Orange - #e86e14 */
+
+@import "reset.css";
+
+/* -------------------- */
+/* -- General Styles -- */
+/* -------------------- */
+html {
+	scroll-padding-top: 70px;
+	/* Update in init.js too */
+	/* height of sticky header */
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 62.5%;
+	vertical-align: center;
+	background: transparent;
+}
+
+#wrap {
+	width: 730px;
+	margin: 70px auto;
+	font-family: "opensans-regular", sans-serif;
+	color: black;
+	border: 1px #eee solid;
+	padding: 70px 70px 10px 70px;
+	-webkit-box-shadow: 0 0 50px #aaa;
+	-moz-box-shadow: 0 0 30px #aaa;
+	box-shadow: 0 0 50px #aaa;
+	background: #fff;
+	background: -moz-linear-gradient(top, #EEEEEE 0%, #FFFFFF 2%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEEEEE), color-stop(2%, #FFFFFF));
+}
+
+body {
+	font-family: times, serif;
+	background-color: #eee;
+}
+
+h1 {
+	font-size: 40px;
+	margin: 0 0 30px 0;
+	letter-spacing: -1px;
+}
+
+h2 {
+	font-size: 34px;
+	margin: 0 0 20px 0;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 30px 0 20px 0;
+}
+
+h4 {
+	font-size: 20px;
+	margin: 3.5rem 0 1rem 0;
+}
+
+h5 {
+	font-size: 18px;
+	margin: 30px 0 5px 0;
+}
+
+p {
+	font-size: 18px;
+	line-height: 22px;
+	margin: 0 0 0 0;
+}
+
+a {
+	text-decoration: none;
+	color: #0b8bbb;
+}
+
+a:hover {
+	color: #eee;
+}
+
+.line {
+	clear: both;
+	border-bottom: 2px #eee solid;
+}
+
+/* ------------ */
+/* -- Header -- */
+/* ------------ */
+#header {
+	float: left;
+	width: 730px;
+	margin: 0 0 2rem 0;
+}
+
+#header #header-content {
+	float: left;
+	width: 450px;
+}
+
+#header #header-subcontent {
+	float: left;
+	margin: 5px 0 0 0
+}
+
+#header #header-subcontent p {
+	font-size: 15px;
+	margin: 0 0 0 1px;
+}
+
+#header #header-content h1 {
+	margin: 0 0 2px 0;
+	color: #444;
+}
+
+#header #header-content h2 {
+	color: #0b8bbb;
+	font-size: 28px;
+}
+
+#header #header-content p {
+	font-size: 15px;
+	margin: 0 0 0 1px;
+}
+
+#header #contact-details {
+	float: left;
+	margin: 18px 0 0 0;
+}
+
+#header #header-content .contact {
+	font-size: 16px;
+	color: #888;
+	margin: 0;
+}
+
+#header #header-content .contact span {
+	color: #444;
+	width: 75px;
+	float: left;
+}
+
+#header #header-photo {
+	float: right;
+	background-color: #eee;
+	padding: 5px 5px 2px 5px;
+	-webkit-box-shadow: 0 0 10px #aaa;
+	-moz-box-shadow: 0 0 10px #aaa;
+	box-shadow: 0 0 10px #aaa;
+}
+
+#header #header-photo .email {
+	font-size: 16px;
+	color: #888;
+	margin: 5px 0 5px 2px;
+}
+
+#header #header-photo img {
+	width: 200px;
+	height: 200px;
+	border: 1px #ddd solid;
+}
+
+/* primary navigation
+--------------------------------------------------------------------- */
+#nav-wrap ul,
+#nav-wrap li,
+#nav-wrap a {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+/* nav-wrap */
+#nav-wrap {
+	font: 12px 'opensans-bold', sans-serif;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	margin: 0 auto;
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.opaque {
+	background-color: rgb(255, 255, 255);
+}
+
+.banner__text {
+	text-transform: none;
+}
+
+/* hide toggle button */
+#nav-wrap>a.mobile-btn {
+	display: none;
+}
+
+ul#nav {
+	min-height: 48px;
+	width: auto;
+
+	/* center align the menu */
+	text-align: center;
+}
+
+ul#nav li {
+	position: relative;
+	list-style: none;
+	height: 48px;
+	display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+
+	/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
+	display: inline-block;
+	padding: 8px 13px;
+	line-height: 32px;
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.5rem;
+	color: #000;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+ul#nav li a:active {
+	background-color: transparent !important;
+}
+
+ul#nav li.current a {
+	color: #458001;
+}
+
+.banner__content {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.banner__text {
+	flex-grow: 1;
+	line-height: 1.4;
+	position: relative;
+}
+
+.banner__close {
+	background: none;
+	border: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.banner__text,
+.banner__close>span {
+	color: #ffffff;
+	position: relative;
+}
+
+
+/* ------------- */
+/* -- Content -- */
+/* ------------- */
+#content .cv-section {
+	margin: 0 0 15px 0;
+}
+
+#content .cv-section h3 {
+	font-size: 2.7rem;
+	color: #444;
+	margin: 3rem 0 2rem 0;
+}
+
+#content .cv-section h4.title {
+	font-size: 2rem;
+	color: #444;
+	margin: 0 0 -26px 0;
+}
+
+#content .cv-section h5.meta {
+	font-size: 1.5rem;
+	color: #777;
+}
+
+#content .cv-section p {
+	font-size: 1.5rem;
+	color: black;
+	letter-spacing: 0;
+}
+
+#content .cv-section b {
+	font-size: 1.5rem;
+}
+
+#content .cv-section span {
+	font-size: 1.2rem;
+	color: black;
+	letter-spacing: 0;
+}
+
+
+#content .cv-section-item {
+	padding: 0 0 15px 0;
+}
+
+#content .cv-section-item sup {
+	vertical-align: super;
+	font-size: 14px;
+}
+
+/* ------------------------------------------------------------------ */
+/* d. Resume Section
+/* Adapted from 
+*   Ceevee v1.0 Layout Stylesheet
+*   url: styleshout.com
+*   03-18-2014
+/* ------------------------------------------------------------------ */
+
+#resume .section-intro h1 {
+	color: black;
+}
+
+#resume {
+	background: #fff;
+}
+
+
+
+#resume .resume-header h2 {
+	color: #F06000
+}
+
+#resume .resume-timeline {
+	max-width: 980px;
+}
+
+#resume .timeline-wrap {
+	position: relative;
+	margin-top: 1.5rem;
+	margin-bottom: 6rem;
+}
+
+#resume .timeline-wrap::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: 35%;
+	top: 0;
+}
+
+#resume .timeline-block {
+	position: relative;
+	padding-top: 1.5rem;
+}
+
+#resume .timeline-ico {
+	height: 4.8rem;
+	width: 4.8rem;
+	line-height: 4.8rem;
+	background: #313131;
+	border-radius: 50%;
+	text-align: center;
+	color: #FFFFFF;
+	position: absolute;
+	left: 35%;
+	top: .9rem;
+	margin-left: -2.4rem;
+}
+
+#resume .timeline-ico i {
+	position: relative;
+	left: .05rem;
+	top: .5rem;
+	font-size: 2rem;
+}
+
+#resume .timeline-header {
+	float: left;
+	width: 35%;
+	padding-right: 50px;
+	text-align: right;
+	box-sizing: border-box;
+}
+
+#resume .timeline-header h3 {
+	margin-bottom: 0;
+	font-size: 2rem;
+}
+
+#resume .timeline-header p {
+	font-family: "poppins-regular", sans-serif;
+	font-size: 1.6rem;
+	color: #888888;
+}
+
+#resume .timeline-content {
+	margin-left: 35%;
+	padding-left: 60px;
+}
+
+#resume .timeline-content h4 {
+	position: relative;
+	padding-bottom: 1.8rem;
+}
+
+#resume .timeline-content h4::after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 50px;
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+/**
+ * responsive:
+ * resume
+ * ------------------------------------------------------------------- 
+ */
+@media only screen and (max-width:1024px) {
+	#resume .timeline-header {
+		padding-right: 50px;
+	}
+
+	#resume .timeline-header h3 {
+		font-size: 1.8rem;
+	}
+
+	#resume .timeline-header p {
+		font-size: 1.4rem;
+	}
+
+	#resume .timeline-content {
+		padding-left: 50px;
+	}
+}
+
+@media only screen and (max-width:768px) {
+	#resume .timeline-wrap::before {
+		left: 2.4rem;
+	}
+
+	#resume .timeline-ico {
+		left: 2.4rem;
+	}
+
+	#resume .timeline-header {
+		float: none;
+		width: auto;
+		padding-right: 15px;
+		text-align: left;
+	}
+
+	#resume .timeline-header h3 {
+		font-size: 2rem;
+	}
+
+	#resume .timeline-header p {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	#resume .timeline-content {
+		margin: 0;
+	}
+
+	#resume .timeline-content h4 {
+		padding-bottom: 0;
+		padding-top: 2.1rem;
+		margin-bottom: .6rem;
+		font-size: 1.7rem;
+	}
+
+	#resume .timeline-content h4::after {
+		bottom: auto;
+		top: 0;
+	}
+
+	#resume .timeline-header,
+	#resume .timeline-content {
+		padding-left: 7rem;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	#resume .resume-header h2 {
+		font-size: 2.2rem;
+	}
+
+	#resume .timeline-wrap::before {
+		left: 1.8rem;
+	}
+
+	#resume .timeline-ico {
+		height: 3.6rem;
+		width: 3.6rem;
+		line-height: 3.6rem;
+		left: 1.8rem;
+		margin-left: -1.8rem;
+		font-size: 1.5rem;
+	}
+
+	#resume .timeline-header,
+	#resume .timeline-content {
+		padding-left: 5.5rem;
+	}
+
+	/**
+ * Photo Credits
+ * ------------------------------------------------------------------- 
+ */
+
+	#photo_cred h4 {
+		font-size: 20px;
+		margin: 1rem 0 1rem 0;
+	}
+}
