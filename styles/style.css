@@ -250,6 +250,10 @@ a:hover {
 	outline: none;
 }
 
+#nav-wrap a:hover {
+	color: #458001;
+}
+
 /* nav-wrap */
 #nav-wrap {
 	font: 12px 'opensans-bold', sans-serif;
@@ -269,6 +273,13 @@ a:hover {
 
 .banner__text {
 	text-transform: none;
+}
+
+/* responsive */
+@media (hover: none) {
+	.body {
+		background-attachment: initial;
+	}
 }
 
 /* hide toggle button */

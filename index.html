@@ -28,6 +28,9 @@
     <li class=""><a class="smoothscroll" href="#research">Research</a></li>
     <li class=""><a class="smoothscroll" href="#experience_resume">Experience</a></li>
     <li class=""><a class="smoothscroll" href="#publications_and_awards">Publications and Awards</a></li>
+    <li class="icon"><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a></li>
   </ul> <!-- end #nav -->
 
   <hr>
@@ -49,6 +52,7 @@
 
 <body
   style="background-image: url('images/sky4.JPG'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+  <!-- Background photo by Bryan Zent -->
   <div id="wrap">
     <section id="about">
       <div id="header">
@@ -313,12 +317,6 @@
         </div>
       </section>
       <!--end expertise-->
-      <div class="line"></div>
-      <footer>
-        <div id="photo_cred" style="text-align: right;">
-          <h4 style="margin: 1rem 0 1rem 0;">Background Photo by Bryan Zent</h3>
-        </div>
-      </footer>
     </div>
     <!--end content-->
   </div>
@@ -328,6 +326,16 @@
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/waypoints.js"></script>
   <script src="js/init.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("nav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
 </body>
 
 </html>
