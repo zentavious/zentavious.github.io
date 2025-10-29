@@ -1,3 +1,246 @@
+/* Make the whole card clickable */
+.blog-card-link {
+	display: block;             /* make anchor behave like block */
+	text-decoration: none;      /* remove underline */
+	color: inherit;             /* inherit text color */
+	transition: transform 0.2s ease;
+  }
+  
+  .blog-card-link:hover .blog-card {
+	transform: translateY(-2px); /* keep hover effect */
+  }
+
+/* ===============================
+   Body
+   =============================== */
+   body.blog,
+   body.blog-post {
+	 background: #ffffff;
+	 color: #222;
+	 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	 margin: 0;
+	 padding: 0;
+   }
+   
+   /* ===============================
+	  Blog Wrapper
+	  =============================== */
+   .blog-wrap {
+	 width: 730px;
+	 margin: 35px auto;
+	 font-family: "opensans-regular", sans-serif;
+	 color: black;
+	 padding: 70px 70px 10px 70px;
+	 background: #fff;
+	 border: none;
+	 box-shadow: none;
+   }
+   
+   /* ===============================
+	  Blog Nav
+	  =============================== */
+   .blog-nav {
+	 width: 100%;
+	 background: #fff; 
+	 padding: 1rem 0;
+	 box-sizing: border-box;
+	 transition: background 0.2s ease;
+   }
+   
+   .blog-nav-inner {
+	 width: 730px;
+	 margin: 0 auto;
+	 display: flex;
+	 justify-content: space-between; /* Title left, nav right */
+	 align-items: center;
+   }
+   
+   /* Blog title on left */
+   .blog-nav-inner .blog-title {
+	 font-size: 1.6rem;
+	 font-weight: bold;
+	 color: #000;
+   }
+   
+   /* Nav links */
+   .blog-nav-inner ul#nav {
+	 margin: 0;
+	 padding: 0;
+	 list-style: none;
+	 display: flex;
+	 gap: 2rem;
+   }
+   
+   .blog-nav-inner ul#nav li a {
+	 font-size: 1.5rem;
+	 color: #000;
+	 text-decoration: none;
+	 padding: 8px 0;
+	 transition: color 0.2s ease-in-out;
+   }
+   
+   /* Highlight current page */
+   .blog-nav-inner ul#nav li.current a {
+		color: #458001;   /* green text */
+		background: none; /* remove background */
+		padding: 8px 0;   /* optional: same vertical padding */
+		border-radius: 0; /* remove rounded corners */
+	}
+   
+   .blog-nav-inner ul#nav li a:hover {
+	 color: #458001;
+   }
+   
+   /* ===============================
+	  Blog Index
+	  =============================== */
+   .blog-index {
+	 max-width: 730px;
+	 margin: auto;
+	 display: flex;
+	 flex-direction: column;
+	 gap: 2.5rem;
+   }
+   
+   .blog-card {
+	 background: none;
+	 border: none;
+	 padding: 0;
+	 transition: transform 0.2s ease;
+   }
+   
+   .blog-card:hover {
+	 transform: translateY(-2px);
+   }
+   
+   .blog-card h2 {
+	 font-size: 1.6rem;
+	 margin-bottom: 0.4rem;
+	 color: #111;
+   }
+   
+   .blog-card p {
+	 font-size: 1rem;
+	 line-height: 1.7;
+	 margin-bottom: 0.75rem;
+	 color: #333;
+   }
+   
+   .blog-card .blog-date {
+	 font-size: 0.9rem;
+	 color: #888;
+	 margin-bottom: 0.4rem;
+   }
+   
+   .blog-card a {
+	 color: #0a66c2;
+	 font-weight: 600;
+	 text-decoration: none;
+   }
+   
+   .blog-card a:hover {
+	 text-decoration: underline;
+   }
+   
+   /* ===============================
+	  Blog Post Page
+	  =============================== */
+   .blog-post {
+	 max-width: 730px;
+	 margin: 0 auto;
+	 padding: 4rem 0;
+	 background: none;
+	 border: none;
+	 box-shadow: none;
+   }
+   
+   .blog-post h1 {
+	 font-size: 2.2rem;
+	 line-height: 1.3;
+	 margin-bottom: 0.5rem;
+	 color: #111;
+   }
+   
+   .blog-meta {
+	 font-size: 0.95rem;
+	 color: #777;
+	 margin-bottom: 2rem;
+   }
+   
+   .blog-post h2,
+   .blog-post h3 {
+	 margin-top: 2rem;
+	 margin-bottom: 0.8rem;
+	 color: #111;
+   }
+   
+   .blog-post p {
+	 margin-bottom: 1.25rem;
+	 line-height: 1.75;
+	 font-size: 1.05rem;
+	 color: #222;
+   }
+   
+   .blog-post a {
+	 color: #0a66c2;
+	 text-decoration: underline;
+   }
+   
+   .blog-post a:hover {
+	 text-decoration: none;
+	 color: #084c8d;
+   }
+   
+   .blog-backlink {
+	 display: inline-block;
+	 margin-top: 3rem;
+	 font-weight: 600;
+	 color: #0a66c2;
+   }
+   
+   .blog-backlink:hover {
+	 text-decoration: underline;
+   }
+   
+   /* ===============================
+	  Responsive Tweaks
+	  =============================== */
+   @media (max-width: 768px) {
+	 .blog-nav-inner {
+	   width: 90%;
+	   flex-direction: column;
+	   align-items: flex-start;
+	   gap: 0.5rem;
+	 }
+   
+	 .blog-nav-inner ul#nav {
+	   flex-direction: column;
+	   align-items: flex-start;
+	   gap: 1rem;
+	 }
+   
+	 .blog-index {
+	   padding: 2rem 0;
+	   gap: 2rem;
+	 }
+   
+	 .blog-card h2 {
+	   font-size: 1.4rem;
+	 }
+   
+	 .blog-post {
+	   padding: 2rem 0;
+	 }
+   
+	 .blog-post h1 {
+	   font-size: 1.8rem;
+	 }
+   
+	 .blog-post p {
+	   font-size: 1rem;
+	 }
+   }
+
 /*
 Template Name:Azuka HTML Template
 Description:A CV/Resume HTML Template
@@ -618,3 +861,43 @@ ul#nav li.current a {
 		margin: 1rem 0 1rem 0;
 	}
 }
+
+strong {
+    font-weight: bold; /* keep bold */
+    font-size: inherit; /* match surrounding font size */
+}
+
+blockquote.citation {
+	border-left: 4px solid #458001; /* green accent */
+	padding-left: 1rem;
+	margin: 2rem 0;
+	font-size: 1rem;
+	color: #333;
+	background: #f9f9f9;
+  }
+  blockquote.citation a {
+	color: #0a66c2;
+	text-decoration: underline;
+  }
+  .download-button {
+	display: inline-block;
+	background-color: #0a66c2; /* blue */
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	font-size: 2rem; /* match h3 size */
+	font-weight: bold;
+	border-radius: 6px;
+	text-decoration: none;
+	text-align: center;
+	transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .download-button:hover {
+	background-color: #084c8d; /* darker blue on hover */
+	transform: translateY(-1px);
+  }
+  
+  .download-button:active {
+	transform: translateY(0);
+  }
+  
